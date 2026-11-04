@@ -1,0 +1,15 @@
+-- Medidas sugeridas para Power BI
+
+Faturamento Total = SUM(Vendas[Faturamento])
+
+Lucro Total = SUM(Vendas[Lucro])
+
+Margem de Lucro = DIVIDE([Lucro Total], [Faturamento Total])
+
+Quantidade Vendida = SUM(Vendas[Quantidade])
+
+Ticket Médio = DIVIDE([Faturamento Total], DISTINCTCOUNT(Vendas[ID_Venda]))
+
+Vendas = DISTINCTCOUNT(Vendas[ID_Venda])
+
+Faturamento por Venda = DIVIDE([Faturamento Total], [Vendas])
